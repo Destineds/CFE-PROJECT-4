@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.o">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./style.css">
+        <title>dds</title>
+    </head>
+    <body>
+
+        <!--navbar-->
+
+        <div class="navbar">
+            <div class="container flex">
+                <h1 class="logo">WELCOME TO DDS MALL</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./docs.html">Docs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!--showcase-->
+        
+        <section class="showcase">
+            <div class="container grid">
+                <div class="showcase-text">
+                    <h2>TO GAIN ENTRANCE, PLEASE TAKE A MINUTE TO FILL THE COVID-19 GUIDE FORM</h2>
+                </div>
+
+                <div class="showcase-form card">
+                    <h2>ENTRANCE PERMIT</h2>               
+                    <form>  
+                        <div class="form-control">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name" placeholder="Please enter name" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="age">Age:</label><br>
+                            <input type="number" id="age" name="age" placeholder="Please enter your age" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="mask">Face Mask:</label>
+                            <select name="mask" id="mask" form="maskform" required>
+                                <option value=true>Yes</option>
+                                <option value=false>No</option>
+                                </select> <br>
+                                <button id="sumbit" type="submit" onclick="getInput();">Submit</button>
+                        </div>
+                    </form>
+                    <div class="visits bg-dark">                
+                        <span class="allowed" id="allowed"></span>
+                        <div class="visitors" id="denied">Denied Visitors: 0</div>
+                    </div>                        
+                </div>
+            </div>
+        </section>
+
+       
+
+<!--footer-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer bg-dark">
+    <div class="container grid grid-3">
+        <h3>POWERED BY DDSTelehealth</h3>
+        <p>Copyright &copy;2020</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="./docs.html">Docs</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-gmail fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="./script.js"></script>
+
+    </body>
+</html>

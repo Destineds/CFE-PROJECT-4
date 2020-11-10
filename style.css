@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">)
+
+:root {
+    --primary-clor: #047aed
+    --secondar-clor: #1c3fa8
+    --dark-clor: #002240
+    --light-clor: #f4f4f4
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: rgb(25, 94, 94);
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+} 
+
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+/*navbar styling*/
+
+.navbar {
+    background-color:#047aed;
+    color: white;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: azure;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/*showcase*/
+
+.showcase {
+    height: 400px;
+    background-color: #047aed;
+    color: white;
+    position: relative;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content: "dds:it does mean";
+    position: absolute;
+    height: 100ox;
+    bottom: -70px;
+    right:  0;
+    left: 0;
+    background: white;
+    transform: skewXY (-29deg);
+    -webkit-transform: skewY(-29deg);
+    -moz-transform: skewY(-29deg);
+    -ms-transform: skewY(-29deg);
+}
+
+
+/*utilities styling*/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: rgb(230, 30, 196);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color:  #047aed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px #fff solid;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+/*bg and colored btn*/
+
+.bg-primary, 
+.btn-primary {
+    background-color: #047aed;
+    color: #fff
+}
+
+.bg-dark, 
+.btn-dark {
+    background-color: #047aed;
+    color: #fff
+}
+
+.bg-light, 
+.btn-light {
+    background-color: #047aed;
+    color: #333
+}
+
+/*text size*/
+
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*padding*/
+
+.py-1 {
+    padding: 1rem;
+}
+.py-2 {
+    padding: 1.5rem;
+}
+.py-3 {
+    padding: 2rem;
+}
+.py-4 {
+    padding: 3rem;
+}
+.py-5 {
+    padding: 4rem;
+}
+
+/*tablets*/
+@media(max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats.grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-area: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+
+}
+/*mobil*/
+
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+    .navbar .flex {
+        flex-direction: auto;
+    }
+    .navbar ul {
+        padding 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
